@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+         Javascript Resizing Images while uploading
+    </title>
+</head>
+
+
+
+
+<body>
+    <div>
+    <p>Upload any image by clicking on the button. The image will be resized to the dimensions of 400*350</p>
+        <input type="file" id="image-upload" accept="image/*" >
+        <img id="img-content"></img>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/mainfunctions.js"></script>
+    <script>
+        function after() { }
+        $(document).on('change','#image-upload',function() {
+            generalReadImageURLWithSize(this,"img-content","450","450",after)
+        });
+    </script>
+</body>
+
+
+</html>
